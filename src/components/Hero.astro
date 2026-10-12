@@ -6,7 +6,6 @@
  */
 import { Picture } from 'astro:assets'
 import Icon from './Icon.astro'
-import Button from './Button.astro'
 import Eyebrow from './Eyebrow.astro'
 import { hero } from '../data/content'
 
@@ -88,11 +87,14 @@ const hasHighlight = titleRest.length > 0
         </p>
 
         <div class="mt-8 flex flex-wrap items-center gap-x-9 gap-y-4">
-          <Button cta="hero-primary" variant="brand">
-            {hero.ctaPrimary}
-          </Button>
-          {/* Espaço vazio no lugar do "Fale com um especialista" (WhatsApp), removido a
-              pedido do cliente (12/10/2026). Mesmo tamanho do botão. */}
+          {/* Espaços vazios no lugar dos dois botões do hero ("Solicite uma avaliação
+              técnica" e "Fale com um especialista"), removidos a pedido do cliente
+              (12/10/2026). Mesmo tamanho dos botões. */}
+          <span
+            aria-hidden="true"
+            data-whatsapp-slot="hero-primary"
+            class="block h-[52px] w-[305px]"
+          ></span>
           <span
             aria-hidden="true"
             data-whatsapp-slot="hero-secondary"
