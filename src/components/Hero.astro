@@ -91,9 +91,13 @@ const hasHighlight = titleRest.length > 0
           <Button cta="hero-primary" variant="brand">
             {hero.ctaPrimary}
           </Button>
-          <Button cta="hero-secondary" variant="link-light" icon={false}>
-            {hero.ctaSecondary}
-          </Button>
+          {/* Espaço vazio no lugar do "Fale com um especialista" (WhatsApp), removido a
+              pedido do cliente (12/10/2026). Mesmo tamanho do botão. */}
+          <span
+            aria-hidden="true"
+            data-whatsapp-slot="hero-secondary"
+            class="block h-[52px] w-[210px]"
+          ></span>
         </div>
 
         {/* 3 destaques — texto sempre em duas linhas, separados por divisórias */}
