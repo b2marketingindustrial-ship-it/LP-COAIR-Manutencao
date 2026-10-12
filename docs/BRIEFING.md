@@ -110,6 +110,20 @@ Desvio registrado: os componentes `ProductLines`, `ProcessSteps`, `ApplicationsG
 3. Fotos reais dos serviços e do hero; URL final, política de privacidade e WhatsApp.
 4. Argumentos de Engenharia, Manutenção e Compras; 4–8 perguntas reais (para `perguntas`).
 
+## Ajustes do cliente — 10/10/2026
+
+Recebidos por WhatsApp (referências em docs/briefing-cliente/ajustes-2026-10-10/, fora do git). Decisões do usuário em 12/10/2026.
+
+| Pedido                           | O que foi feito                                                                                                                                           | Desvio do padrão                                                                                                                                                                                                  |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hero: título, subtítulo e imagem | H1 "Sua indústria precisa de manutenção especializada em compressores de parafuso?", subtítulo com as 5 marcas, banner da sala de compressores multimarca | **exceção aprovada:** o H1 não contém a palavra-chave (faltam "ar" e "industrial"); o check:lp falha nesse ponto e o CI do GitHub (wp-build) não publica até isso mudar. O title da aba segue com a palavra-chave |
+| Novo módulo depois dos serviços  | seção `situacoes` ("Problemas atendidos em compressores industriais multimarcas"), 6 cards com o texto exato do cliente                                   | texto exato aprovado: a introdução e 4 descrições passam dos limites (170/90 caracteres) — só aviso no check                                                                                                      |
+| Mais uma coluna nos serviços     | card "Reconstrução de unidades" (Rebuild), grid de 5 no desktop; descrição resumida para 90 caracteres a partir do texto do cliente                       | **aprovado:** 5 cards (biblioteca aceita 4); itemsMax ajustado no lp.manifest.json. Rebuild deixa de ser conteúdo futuro por pedido do cliente. Foto 450×301, pedir versão maior                                  |
+| Diferenciais: imagem e título    | "Conte com uma equipe técnica / especializada em sistemas de ar comprimido" e foto do técnico COAIR                                                       | frase com 11 palavras (regra: 3–6)                                                                                                                                                                                |
+| Cotação: tirar o selo de área    | selo "100 km de Indaiatuba e São Paulo" removido; ficam 2 selos                                                                                           | padrão pede 3 selos; a área atendida deixa de aparecer na página (o anúncio insere a cidade)                                                                                                                      |
+
+Composição nova: `npm run compose -- linhas situacoes processo aplicacoes diferenciais`. Os componentes no visual COAIR foram restaurados depois do compose; SituationCards foi redesenhado pela referência do cliente.
+
 ## Aprovação
 
 - [ ] Composição e copy aprovadas pelo usuário (construído direto do briefing em 09/10/2026, a pedido)

@@ -1,6 +1,6 @@
 {
   "standardVersion": "2.7.1",
-  "composedAt": "2026-10-10",
+  "composedAt": "2026-10-12",
   "library": "../../LP-STARTER-B2/sections",
   "primitives": [
     "BrandCarousel"
@@ -10,6 +10,7 @@
       "linhas"
     ],
     "apoio": [
+      "situacoes",
       "processo"
     ],
     "prova": [
@@ -48,7 +49,7 @@
       "contract": {
         "itemsPath": "items",
         "itemsMin": 3,
-        "itemsMax": 4,
+        "itemsMax": 5,
         "requiredItemFields": [
           "id",
           "tag",
@@ -89,6 +90,49 @@
           "alpha": false
         }
       ]
+    },
+    {
+      "slug": "situacoes",
+      "id": "situacoes",
+      "title": "Situações",
+      "phase": "apoio",
+      "component": "SituationCards.astro",
+      "data": "situacoes.ts",
+      "dataExport": "situations",
+      "carriesNavy": false,
+      "tone": "light",
+      "rhythm": "even",
+      "tones": [
+        "light",
+        "gray"
+      ],
+      "rhythms": [
+        "even",
+        "tight",
+        "open",
+        "flow"
+      ],
+      "exampleHash": "cea58cff300b46d3",
+      "ctas": [
+        "situacoes-cta",
+        "situacoes-{item.id}"
+      ],
+      "contract": {
+        "itemsPath": "items",
+        "itemsMin": 4,
+        "itemsMax": 6,
+        "requiredItemFields": [
+          "id",
+          "icon",
+          "title",
+          "outcome"
+        ],
+        "maxLength": {
+          "text": 170,
+          "item.outcome": 90
+        }
+      },
+      "assets": []
     },
     {
       "slug": "processo",

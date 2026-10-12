@@ -47,16 +47,17 @@ export const header = {
 
 export const hero = {
   eyebrow: 'Manutenção multimarcas',
-  title: 'Manutenção de compressor de ar industrial com diagnóstico técnico e equipe interna.',
+  /** Texto exato do cliente (10/10/2026): não contém a palavra-chave — exceção no BRIEFING.md. */
+  title: 'Sua indústria precisa de manutenção especializada em compressores de parafuso?',
   /** Trecho do título destacado em verde (precisa existir dentro de `title`). */
-  highlight: 'diagnóstico técnico',
-  text: 'Preventiva, corretiva e preditiva para compressores de parafuso Atlas Copco, Ingersoll Rand, Kaeser, Schulz, Chicago Pneumatic e outras marcas. Atendimento B2B em até 100 km de Indaiatuba e de São Paulo.',
+  highlight: 'manutenção especializada',
+  text: 'Manutenção preventiva, corretiva e preditiva para compressores Atlas Copco, Ingersoll Rand, Kaeser, Schulz, Chicago Pneumatic e outras marcas.',
   /** Rótulos dos botões do hero (o vocabulário `cta` continua valendo no resto da página). */
   ctaPrimary: 'Solicite uma avaliação técnica',
   ctaSecondary: 'Fale com um especialista',
   banner: {
     src: heroBg,
-    alt: `Técnico da ${site.brandShort} ao lado de compressores de parafuso de várias marcas`,
+    alt: `Compressores de parafuso ${site.brandShort}, Atlas Copco, Kaeser e Schulz em sala de compressores`,
   },
   points: [
     { icon: 'cog', line1: 'Manutenção', line2: 'multimarcas' },
@@ -84,7 +85,6 @@ export const quote = {
   trust: [
     { icon: 'factory', label: 'Atendimento B2B\nindustrial' },
     { icon: 'wrench', label: 'Resposta técnica\nem campo' },
-    { icon: 'map-pin', label: '100 km de Indaiatuba\ne São Paulo' },
   ],
   /** Nota de LGPD exibida abaixo do formulário. */
   lgpd: `Seus dados são usados apenas para responder à sua solicitação de cotação, conforme a LGPD.`,
@@ -92,7 +92,7 @@ export const quote = {
   eyebrow: string
   title: string
   text: string
-  trust: readonly [TrustItem, TrustItem, TrustItem]
+  trust: readonly [TrustItem, TrustItem]
   lgpd: string
 }
 

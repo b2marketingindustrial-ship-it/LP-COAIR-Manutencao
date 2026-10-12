@@ -19,11 +19,11 @@ export interface Reason {
 export const why = {
   eyebrow: `Por que a ${site.brandShort}`,
   /** Cada item é uma linha do H2 (quebra forçada). */
-  titleLines: ['Evite paradas', 'de produção.'],
+  titleLines: ['Conte com uma equipe técnica', 'especializada em sistemas de ar comprimido'],
   text: `Manutenção multimarcas com equipe técnica e laboratório internos, planos adaptados à sua operação e peças integradas ao serviço. A ${site.brandShort} cuida da continuidade do seu ar comprimido.`,
   scene: {
     src: cenario,
-    alt: 'Sala de compressores industriais com reservatórios azuis e tubulações',
+    alt: `Técnico da ${site.brandShort} ao lado de compressores de parafuso de várias marcas`,
   },
   reasons: [
     {

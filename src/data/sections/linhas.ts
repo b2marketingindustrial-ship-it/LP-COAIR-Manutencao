@@ -2,7 +2,9 @@
  * Dados da seção "Linhas de produto" (biblioteca B2, fase: oferta).
  *
  * COAIR — LP de serviço: os cards são os serviços de manutenção (os três planos e a
- * auditoria técnica), e o card escuro é a auditoria, que olha o sistema inteiro.
+ * auditoria técnica), mais a reconstrução de unidades pedida pelo cliente em 10/10/2026.
+ * São 5 cards, um a mais que o limite da biblioteca (desvio registrado no BRIEFING.md).
+ * O card escuro é a auditoria, que olha o sistema inteiro.
  * Fotos provisórias, vindas das cenas da LP de locação; troque pelas fotos reais
  * de cada serviço (1200×900) quando chegarem.
  */
@@ -11,6 +13,7 @@ import type { Photo } from '@data/types'
 import preventiva from '@assets/linhas/linha-preventiva.png'
 import corretiva from '@assets/linhas/linha-corretiva.png'
 import preditiva from '@assets/linhas/linha-preditiva.png'
+import reconstrucao from '@assets/linhas/linha-reconstrucao.jpg'
 import auditoria from '@assets/linhas/linha-auditoria.png'
 
 export interface ProductLine {
@@ -57,6 +60,18 @@ export const productLines = {
       dark: false,
     },
     {
+      id: 'reconstrucao',
+      tag: 'Rebuild',
+      title: 'Reconstrução de unidades',
+      description: 'Recuperação de unidades compressoras, com análise dos componentes internos.',
+      photo: {
+        src: reconstrucao,
+        alt: 'Técnico ajustando os rotores de uma unidade compressora de parafuso aberta',
+      },
+      features: ['Análise dos componentes', 'Substituição de peças', 'Conforme o equipamento'],
+      dark: false,
+    },
+    {
       id: 'auditoria',
       tag: 'Auditoria',
       title: 'Auditoria técnica',
@@ -76,4 +91,5 @@ export const productLines = {
   items:
     | readonly [ProductLine, ProductLine, ProductLine]
     | readonly [ProductLine, ProductLine, ProductLine, ProductLine]
+    | readonly [ProductLine, ProductLine, ProductLine, ProductLine, ProductLine]
 }

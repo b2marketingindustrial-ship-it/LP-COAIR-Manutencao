@@ -1,0 +1,73 @@
+---
+/**
+ * Situações — fase "apoio" da biblioteca B2, no visual COAIR.
+ *
+ * Segue a referência enviada pelo cliente: cabeçalho centrado, grade de 3 colunas
+ * no desktop (2 no tablet, 1 no mobile) e cards com o selo verde sobreposto à
+ * borda superior. O card inteiro é o CTA; o botão abaixo da grade é o CTA da seção.
+ */
+import Section from '@components/Section.astro'
+import Icon from '@components/Icon.astro'
+import Button from '@components/Button.astro'
+import SectionHeader from '@components/SectionHeader.astro'
+import type { SectionProps } from '@lib/layout'
+import { cta } from '@data/content'
+import { situations } from '@data/sections/situacoes'
+
+type Props = SectionProps
+
+const { tone, rhythm } = Astro.props
+---
+
+<Section id="situacoes" tone={tone} rhythm={rhythm}>
+  <SectionHeader
+    eyebrow={situations.eyebrow}
+    title={situations.title}
+    text={situations.text}
+    align="center"
+    width="4xl"
+    accent="green"
+    shape="dash"
+  />
+
+  <ul class="mt-12 grid grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+    {situations.items.map((item) => (
+      <li class="pt-3">
+        <button
+          type="button"
+          data-cta={`situacoes-${item.id}`}
+          class="btn-slave-whats situation-card group relative flex h-full w-full flex-col gap-2 rounded-xl border border-[#2aa5c4]/55 bg-neutral-light px-5 pt-8 pb-5 text-left shadow-[0_1px_2px_rgba(13,29,48,0.05)] transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-brand-green-deep hover:shadow-[0_24px_48px_-28px_rgba(0,33,71,0.35)]"
+        >
+          <span class="situation-badge absolute -top-3 left-5 flex size-10 items-center justify-center rounded-lg bg-[linear-gradient(160deg,#1f9fb8,#147f99)] text-neutral-light shadow-[0_8px_18px_-8px_rgba(20,127,153,0.8)] transition-colors duration-300 group-hover:bg-[linear-gradient(160deg,var(--color-brand-green),var(--color-brand-green-deep))]">
+            <Icon name={item.icon} class="size-[22px] [stroke-width:2.2]" />
+          </span>
+
+          <span class="font-display text-[17px] leading-snug font-extrabold text-primary-dark">
+            {item.title}
+          </span>
+
+          <span class="font-sans text-[14px] leading-relaxed text-ink-soft">{item.outcome}</span>
+        </button>
+      </li>
+    ))}
+  </ul>
+
+  <div class="mt-10 flex justify-center">
+    <Button cta="situacoes-cta" variant="brand" class="w-full sm:w-auto">
+      {cta.secondary}
+    </Button>
+  </div>
+</Section>
+
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    .situation-card,
+    .situation-card * {
+      transition: none !important;
+    }
+
+    .situation-card:hover {
+      transform: none;
+    }
+  }
+</style>
