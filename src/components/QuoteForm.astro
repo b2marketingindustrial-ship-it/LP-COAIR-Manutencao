@@ -8,7 +8,7 @@
  */
 import Icon from './Icon.astro'
 import Eyebrow from './Eyebrow.astro'
-import { quote, cta } from '../data/content'
+import { quote } from '../data/content'
 import { site } from '../data/site'
 
 const isDev = import.meta.env.DEV
@@ -140,14 +140,13 @@ const bottomWaves = Array.from({ length: 14 }, (_, i) => {
         </p>
 
         <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <button
-            type="button"
-            data-cta="cotacao-whatsapp"
-            class="btn-slave-whats inline-flex items-center justify-center gap-2.5 bg-primary-dark px-6 py-3.5 font-sans text-[15px] font-semibold text-neutral-light transition-colors duration-200 hover:bg-primary-dark-800"
-          >
-            <Icon name="whatsapp" class="size-4 shrink-0" />
-            {cta.whatsapp}
-          </button>
+          {/* Espaço vazio no lugar do botão "Chamar no WhatsApp", removido a pedido do
+              cliente (12/10/2026). Mesmo tamanho do botão, para o layout não mudar. */}
+          <span
+            aria-hidden="true"
+            data-whatsapp-slot="cotacao-whatsapp"
+            class="block h-[52px] w-full sm:w-[220px]"
+          ></span>
         </div>
 
         <ul class="mt-7 flex flex-wrap items-center gap-x-5 gap-y-4">

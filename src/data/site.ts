@@ -137,5 +137,8 @@ export const campaign = {
   forbidden: readonly string[]
 }
 
-/** WhatsApp comercial (entrada 12). Número no formato internacional, só dígitos (ex.: 5511999999999). Vazio desativa o botão flutuante. */
-export const whatsapp = '5519993544919'
+/**
+ * WhatsApp comercial (entrada 12). Número no formato internacional, só dígitos (ex.: 5511999999999). Vazio desativa o botão flutuante.
+ * Vazio a pedido do cliente (12/10/2026): sem botões de WhatsApp; o número era 5519993544919.
+ */
+export const whatsapp = ''

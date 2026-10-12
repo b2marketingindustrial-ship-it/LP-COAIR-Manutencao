@@ -134,6 +134,8 @@ const socialClass =
                     <Icon name="whatsapp" class="size-5" />
                   </a>
                 )}
+                {/* Sem WhatsApp: espaço vazio do tamanho do ícone, no mesmo lugar */}
+                {!whatsapp && <span aria-hidden="true" class="block size-10 shrink-0"></span>}
                 {site.linkedin && (
                   <a
                     href={site.linkedin}
