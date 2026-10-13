@@ -18,8 +18,9 @@ export interface Situation {
 
 export const situations = {
   eyebrow: 'Diagnóstico técnico',
-  title: 'Problemas atendidos em compressores industriais multimarcas',
-  text: 'Atendemos diferentes marcas e modelos de compressores industriais, considerando o tipo de equipamento, o regime de uso, os sintomas apresentados e a criticidade do processo produtivo.',
+  /** `\n` = quebra de linha no desktop (pedido de 13/10/2026). */
+  title: 'Problemas atendidos em compressores\nindustriais multimarcas',
+  text: 'Atendemos diferentes marcas e modelos de compressores industriais, considerando o tipo de equipamento,\no regime de uso, os sintomas apresentados e a criticidade do processo produtivo.',
   items: [
     {
       id: 'queda-pressao',

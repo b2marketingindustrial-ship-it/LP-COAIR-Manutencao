@@ -1,13 +1,16 @@
 ---
 /**
  * Header no visual COAIR: faixa translúcida sobre a foto do hero, logo, menu de âncoras e
- * CTA com contorno verde-água. Fica fixo no topo e escurece ao rolar a página.
+ * CTA na pílula verde dos outros botões da página, em tamanho `sm`. Fica fixo no topo e
+ * escurece ao rolar a página.
  * Logo em src/assets/LOGO.png; os links apontam para os ids das seções da página.
  */
 import { Image } from 'astro:assets'
 import logo from '../assets/LOGO.png'
 import Icon from './Icon.astro'
+import Button from './Button.astro'
 import { site } from '../data/site'
+import { cta, hero } from '../data/content'
 
 const solutions = [
   { label: 'Serviços de manutenção', href: '#linhas' },
@@ -26,7 +29,7 @@ const links = [
   data-header
   class="fixed inset-x-0 top-0 z-50 border-b border-white/[0.06] bg-[rgb(0_27_45/0.78)] transition-[background-color,box-shadow] duration-300 data-scrolled:bg-primary-dark-900/95 data-scrolled:shadow-[0_12px_30px_-18px_rgba(0,0,0,0.8)] data-scrolled:backdrop-blur-md"
 >
-  <div class="mx-auto flex h-(--header-h) max-w-page items-center justify-between gap-6 px-4 sm:px-6 lg:px-10">
+  <div class="mx-auto flex h-(--header-h) max-w-page items-center justify-between gap-6 px-6 lg:px-10">
     {/* 1. Logo */}
     <a href="/" class="flex shrink-0 items-center">
       <Image
@@ -79,13 +82,12 @@ const links = [
       </ul>
     </nav>
 
-    {/* 3. Espaço vazio no lugar do CTA "Fale com um especialista" (WhatsApp), removido a
-        pedido do cliente (12/10/2026). Mesmo tamanho do botão. */}
-    <span
-      aria-hidden="true"
-      data-whatsapp-slot="header-cta"
-      class="block h-9 w-[132px] shrink-0 sm:h-[42px] sm:w-[262px]"
-    ></span>
+    {/* 3. CTA (13/10/2026, no lugar do espaço vazio de 12/10). Rótulo curto no mobile, onde
+        o completo não cabe ao lado da logo. */}
+    <Button cta="header-cta" variant="brand" size="sm" class="shrink-0">
+      <span class="sm:hidden">{cta.primaryShort}</span>
+      <span class="hidden sm:inline">{hero.ctaPrimary}</span>
+    </Button>
   </div>
 </header>
 

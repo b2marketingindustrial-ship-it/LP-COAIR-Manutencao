@@ -25,19 +25,19 @@ export interface Application {
 export const applications = {
   eyebrow: 'Marcas atendidas',
   title: 'Manutenção multimarcas para compressores de parafuso',
-  text: 'Também atendemos Schulz, Chicago Pneumatic e outras marcas de compressores de parafuso.',
+  text: 'Também atendemos Schulz, Chicago\u00A0Pneumatic e outras marcas de compressores de parafuso.',
   items: [
     {
       id: 'atlas-copco',
       label: 'Atlas Copco',
-      description: 'Manutenção preventiva e corretiva em compressores Atlas Copco.',
+      description: 'Manutenção preventiva e corretiva em compressores Atlas\u00A0Copco.',
       icon: 'cog',
       photo: { src: atlasCopco, alt: 'Compressor de parafuso Atlas Copco da linha GA' },
     },
     {
       id: 'ingersoll-rand',
       label: 'Ingersoll Rand',
-      description: 'Manutenção preventiva e corretiva em compressores Ingersoll Rand.',
+      description: 'Manutenção preventiva e corretiva em compressores Ingersoll\u00A0Rand.',
       icon: 'cog',
       photo: { src: ingersollRand, alt: 'Compressor de parafuso Ingersoll Rand RS160ie' },
     },
@@ -51,7 +51,7 @@ export const applications = {
     {
       id: 'coair',
       label: site.brandShort,
-      description: 'Manutenção da linha Heavy Duty de compressores de parafuso.',
+      description: 'Manutenção da linha Heavy\u00A0Duty de compressores de parafuso.',
       icon: 'badge-check',
       photo: { src: coair, alt: `Compressor de parafuso ${site.brandShort} HD75 VSD Heavy Duty` },
     },

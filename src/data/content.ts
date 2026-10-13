@@ -51,9 +51,9 @@ export const hero = {
   title: 'Sua indústria precisa de manutenção especializada em compressores de parafuso?',
   /** Trecho do título destacado em verde (precisa existir dentro de `title`). */
   highlight: 'manutenção especializada',
-  text: 'Manutenção preventiva, corretiva e preditiva para compressores Atlas Copco, Ingersoll Rand, Kaeser, Schulz, Chicago Pneumatic e outras marcas.',
+  text: 'Manutenção preventiva, corretiva e preditiva para compressores Atlas\u00A0Copco, Ingersoll\u00A0Rand, Kaeser, Schulz, Chicago\u00A0Pneumatic e outras marcas.',
   /** Rótulos dos botões do hero (o vocabulário `cta` continua valendo no resto da página). */
-  ctaPrimary: 'Solicite uma avaliação técnica',
+  ctaPrimary: 'Solicite uma cotação',
   ctaSecondary: 'Fale com um especialista',
   banner: {
     src: heroBg,
@@ -101,8 +101,8 @@ export const quote = {
 export const footer = {
   /** Frase da marca ao lado da logo. */
   tagline: 'Manutenção, peças e suporte técnico para a máxima performance do seu ar comprimido',
+  /** Nome acessível do bloco de contatos (não aparece na tela). */
   contactLabel: 'Atendimento',
-  quoteLabel: 'Solicite sua cotação',
   quoteButton: 'Solicitar cotação',
   credit: { label: 'B2 Marketing Industrial', url: 'https://b2marketingindustrial.com.br' },
 } as const

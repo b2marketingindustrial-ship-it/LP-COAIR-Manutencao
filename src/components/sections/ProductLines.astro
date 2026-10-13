@@ -2,14 +2,17 @@
 /**
  * Linhas de produto — fase "oferta" da biblioteca B2, no visual COAIR.
  *
- * LP de serviço: cabeçalho à esquerda e grid de 3–4 cards de serviço, um deles
- * escuro. Sem logos autorizadas, o carrossel de marcas não entra (as marcas vão por
- * extenso na seção de marcas atendidas). As fotos são cenas, por isso cobrem o
- * palco do card em vez de ficarem recortadas sobre ele. Acentos em verde COAIR.
+ * LP de serviço: cabeçalho à esquerda, carrossel de logos das marcas atendidas e grid
+ * de cards de serviço, um deles escuro. O carrossel fica ao lado do cabeçalho a partir
+ * de xl, com 60% da largura (cerca de 4 logos à vista; título e texto quebram no resto),
+ * e embaixo dele antes disso. As fotos
+ * são cenas, por isso cobrem o palco do card em vez de ficarem recortadas sobre ele.
+ * Acentos em verde COAIR.
  */
 import { Image } from 'astro:assets'
 import Section from '@components/Section.astro'
 import Icon from '@components/Icon.astro'
+import BrandCarousel from '@components/BrandCarousel.astro'
 import SectionHeader from '@components/SectionHeader.astro'
 import type { SectionProps } from '@lib/layout'
 import { cta } from '@data/content'
@@ -22,14 +25,20 @@ const lines = productLines.items
 ---
 
 <Section id="linhas" tone={tone} rhythm={rhythm}>
-  <SectionHeader
-    eyebrow={productLines.eyebrow}
-    title={productLines.title}
-    text={productLines.text}
-    width="2xl"
-    accent="green"
-    shape="dash"
-  />
+  <div class="flex flex-col gap-8 xl:flex-row xl:items-center xl:gap-12">
+    <SectionHeader
+      eyebrow={productLines.eyebrow}
+      title={productLines.title}
+      text={productLines.text}
+      width="full"
+      accent="green"
+      shape="dash"
+      class="min-w-0 flex-1"
+    />
+    <div class="min-w-0 xl:w-[60%] xl:shrink-0">
+      <BrandCarousel />
+    </div>
+  </div>
 
   <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
     {lines.map((line, i) => (

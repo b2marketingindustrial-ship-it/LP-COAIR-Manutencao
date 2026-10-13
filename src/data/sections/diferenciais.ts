@@ -20,7 +20,8 @@ export const why = {
   eyebrow: `Por que a ${site.brandShort}`,
   /** Cada item é uma linha do H2 (quebra forçada). */
   titleLines: ['Conte com uma equipe técnica', 'especializada em sistemas de ar comprimido'],
-  text: `Manutenção multimarcas com equipe técnica e laboratório internos, planos adaptados à sua operação e peças integradas ao serviço. A ${site.brandShort} cuida da continuidade do seu ar comprimido.`,
+  /** `\n` = quebra de linha a partir de 1280px (pedido de 13/10/2026). */
+  text: `Manutenção multimarcas com equipe técnica e laboratório internos,\nplanos adaptados à sua operação e peças integradas ao serviço.\nA ${site.brandShort} cuida da continuidade do seu ar comprimido.`,
   scene: {
     src: cenario,
     alt: `Técnico da ${site.brandShort} ao lado de compressores de parafuso de várias marcas`,
@@ -29,7 +30,7 @@ export const why = {
     {
       icon: 'layers',
       title: 'Atendimento multimarcas',
-      description: 'Manutenção em Atlas Copco, Ingersoll Rand, Kaeser, Schulz e outras.',
+      description: 'Manutenção em Atlas\u00A0Copco, Ingersoll\u00A0Rand, Kaeser, Schulz e outras.',
     },
     {
       icon: 'users',

@@ -20,7 +20,7 @@ export const process = {
   title: 'Do diagnóstico à manutenção em campo',
   /** Trecho do título destacado em verde (precisa existir dentro de `title`). */
   highlight: 'manutenção em campo',
-  text: 'Um caminho definido do primeiro contato à execução, com o plano adaptado à operação de cada cliente.',
+  text: 'Do primeiro contato à execução, com o plano adaptado a cada operação.',
   microcopy: 'Equipe técnica interna',
   steps: [
     {

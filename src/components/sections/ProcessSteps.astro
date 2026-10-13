@@ -27,7 +27,7 @@ const hasHighlight = titleRest.length > 0
 ---
 
 <Section id="processo" tone={tone} rhythm={rhythm} container={false} class="relative isolate">
-  <div class="mx-auto max-w-[1212px] px-6 lg:px-10">
+  <div class="mx-auto max-w-page px-6 lg:px-10">
     <div class="process-panel navy-premium relative overflow-hidden rounded-2xl border border-white/10 p-6 shadow-[0_24px_48px_-30px_rgba(0,24,48,0.7)] sm:p-8 lg:px-10 lg:py-9">
       <span aria-hidden="true" class="blueprint-grid pointer-events-none absolute inset-0"></span>
       <span
@@ -57,8 +57,8 @@ const hasHighlight = titleRest.length > 0
             </p>
           </div>
 
-          <div class="flex flex-col items-stretch gap-3 lg:shrink-0 lg:items-center">
-            <Button cta="processo-cta" variant="brand-glow" class="w-full lg:w-auto">
+          <div class="flex flex-col items-start gap-3 lg:shrink-0 lg:items-center">
+            <Button cta="processo-cta" variant="brand">
               {cta.secondary}
             </Button>
             <span class="flex items-center justify-center gap-2 font-sans text-[13px] text-neutral-light/85">
@@ -73,7 +73,7 @@ const hasHighlight = titleRest.length > 0
           style={`--process-steps: ${steps.length}`}
         >
           {steps.map((step, i) => (
-            <li class="process-step relative flex w-[74%] shrink-0 snap-start flex-col gap-2.5 rounded-xl border border-[#5d85b0]/45 bg-white/[0.03] p-4 sm:w-auto">
+            <li class="process-step relative flex w-[80%] shrink-0 snap-start flex-col gap-2.5 rounded-xl border border-[#5d85b0]/45 bg-white/[0.03] p-4 sm:w-auto">
               <div class="flex items-center gap-3">
                 <span class="process-badge relative z-[2] flex size-11 shrink-0 items-center justify-center rounded-full border border-white/45 text-neutral-light">
                   <Icon name={step.icon} class="size-[18px]" />

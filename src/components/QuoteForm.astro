@@ -7,8 +7,9 @@
  * feixe de linhas finas e desenho técnico à direita; destaques com ícone em quadradinho menta.
  */
 import Icon from './Icon.astro'
+import Button from './Button.astro'
 import Eyebrow from './Eyebrow.astro'
-import { quote } from '../data/content'
+import { hero, quote } from '../data/content'
 import { site } from '../data/site'
 
 const isDev = import.meta.env.DEV
@@ -105,8 +106,8 @@ const bottomWaves = Array.from({ length: 14 }, (_, i) => {
           </slot>
         </div>
 
-        {/* Nota de LGPD */}
-        <p class="mt-3 font-sans text-[11px] leading-relaxed text-ink-soft/80">
+        {/* Nota de LGPD (cor cheia: com /80 o contraste ficava em 4.37, abaixo de 4.5) */}
+        <p class="mt-3 font-sans text-[11px] leading-relaxed text-ink-soft">
           {quote.lgpd}
           {site.privacyUrl && (
             <>
@@ -139,14 +140,14 @@ const bottomWaves = Array.from({ length: 14 }, (_, i) => {
           {quote.text}
         </p>
 
-        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-          {/* Espaço vazio no lugar do botão "Chamar no WhatsApp", removido a pedido do
-              cliente (12/10/2026). Mesmo tamanho do botão, para o layout não mudar. */}
-          <span
-            aria-hidden="true"
-            data-whatsapp-slot="cotacao-whatsapp"
-            class="block h-[52px] w-full sm:w-[220px]"
-          ></span>
+        {/* Os mesmos botões do hero (13/10/2026), no lugar do espaço vazio de 12/10 */}
+        <div class="mt-7 flex flex-wrap items-center gap-x-9 gap-y-4">
+          <Button cta="cotacao-primary" variant="brand">
+            {hero.ctaPrimary}
+          </Button>
+          <Button cta="cotacao-whatsapp" variant="link-dark" icon={false}>
+            {hero.ctaSecondary}
+          </Button>
         </div>
 
         <ul class="mt-7 flex flex-wrap items-center gap-x-5 gap-y-4">
