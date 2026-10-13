@@ -57,7 +57,7 @@ export const hero = {
   ctaSecondary: 'Fale com um especialista',
   banner: {
     src: heroBg,
-    alt: `Compressores de parafuso ${site.brandShort}, Atlas Copco, Kaeser e Schulz em sala de compressores`,
+    alt: `Compressores de parafuso ${site.brandShort}, Atlas Copco, Ingersoll Rand, Kaeser e Schulz em galpão industrial`,
   },
   points: [
     { icon: 'cog', line1: 'Manutenção', line2: 'multimarcas' },

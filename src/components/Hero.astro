@@ -39,9 +39,8 @@ const hasHighlight = titleRest.length > 0
     />
   </div>
 
-  {/* z2 — véus navy: esquerdo (texto) e direito (shortcode) */}
-  <div class="hero-navy pointer-events-none absolute inset-y-0 left-0 z-[2] w-full"></div>
-  <div class="hero-navy-right pointer-events-none absolute inset-y-0 right-0 z-[2] hidden lg:block"></div>
+  {/* z2 — véu navy só no mobile, onde o texto fica sobre a foto; no desktop a foto fica limpa (pedido de 13/10) */}
+  <div class="hero-navy pointer-events-none absolute inset-y-0 left-0 z-[2] w-full lg:hidden"></div>
 
   {/* z3 — malha de pontos */}
   <div
@@ -206,13 +205,11 @@ const hasHighlight = titleRest.length > 0
 
   /* Metade da largura da página (--container-page / 2): ancora as colunas e a foto no mesmo eixo. */
   .hero-photo,
-  .hero-navy,
-  .hero-navy-right,
   .hero-dots,
   .hero-grid {
     --page-half: calc(var(--container-page) / 2);
     --page-edge: max(0px, calc(50% - var(--page-half)));
-    /* Desvio da borda do conteúdo em relação ao contêiner de 1320px dos véus: 0 até 1320, 55px a partir de 1430. */
+    /* Desvio da borda do conteúdo em relação ao contêiner de 1320px da malha: 0 até 1320, 55px a partir de 1430. */
     --page-shift: max(0px, min(var(--page-half), 50%) - 660px);
   }
 
@@ -234,34 +231,17 @@ const hasHighlight = titleRest.length > 0
     }
 
     /* A foto termina na borda direita da página; com 1700px o assunto (62–79% da foto) cai na coluna 2. */
+    /* Sem véus no desktop: só as bordas da foto dissolvem no fundo, sem corte seco em telas largas (a da direita fica atrás do shortcode). */
     .hero-photo {
       left: auto;
       right: var(--page-edge);
       width: 1700px;
-    }
-
-    /* Navy sólido sob a coluna 1, dissolvendo antes da janela. */
-    .hero-navy {
-      width: calc(50% - 20px + var(--page-shift));
-      background:
-        radial-gradient(900px 520px at 10% -10%, rgb(255 255 255 / 0.1) 0%, transparent 55%),
-        linear-gradient(
-          to left,
-          transparent 0px,
-          rgb(0 24 48 / 0.45) 70px,
-          var(--color-primary-dark-800) 150px,
-          var(--color-primary-dark) 100%
-        );
-    }
-
-    /* Navy da direita: cobre a coluna do shortcode e fecha a margem da página. */
-    .hero-navy-right {
-      width: calc(50% - 261px - var(--page-shift));
-      background: linear-gradient(
+      mask-image: linear-gradient(
         to right,
-        transparent 0px,
-        rgb(0 24 48 / 0.55) 200px,
-        var(--color-primary-dark-900) 364px
+        transparent,
+        black 200px,
+        black calc(100% - 220px),
+        transparent
       );
     }
 
