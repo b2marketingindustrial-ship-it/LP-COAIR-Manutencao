@@ -54,9 +54,9 @@ export const productLines = {
       id: 'preditiva',
       tag: 'Preditiva',
       title: 'Manutenção preditiva',
-      description: 'Acompanhamento do equipamento para antecipar falhas antes da parada.',
+      description: 'Acompanhamento do equipamento para identificar sinais de falha antes da parada.',
       photo: { src: preditiva, alt: 'Painel de controle de compressor de ar industrial' },
-      features: ['Antecipação de falhas', 'Desempenho otimizado', 'Laboratório interno'],
+      features: ['Identificação de sinais de falha', 'Desempenho otimizado', 'Laboratório interno'],
       dark: false,
     },
     {

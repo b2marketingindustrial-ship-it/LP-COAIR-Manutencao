@@ -39,7 +39,7 @@ export const process = {
       id: 'plano',
       icon: 'clipboard-check',
       title: 'Plano sob medida',
-      description: 'O plano considera modal de operação, intensidade de uso e regime de trabalho.',
+      description: 'O plano considera regime de operação, intensidade de uso e regime de trabalho.',
     },
     {
       id: 'execucao',

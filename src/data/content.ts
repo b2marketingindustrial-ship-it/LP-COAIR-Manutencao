@@ -80,7 +80,7 @@ export const hero = {
 export const quote = {
   eyebrow: 'Solicite sua cotação',
   title: `Fale com a ${site.brandShort} e solicite uma avaliação técnica do seu compressor.`,
-  text: 'Informe a marca do compressor, o modal de operação, a intensidade de uso e o regime de trabalho: nossa equipe técnica avalia e indica o plano de manutenção. Preencha o formulário e nossa equipe entra em contato.',
+  text: 'Informe a marca do compressor, o regime de operação, a intensidade de uso e o regime de trabalho: nossa equipe técnica avalia e indica o plano de manutenção. Preencha o formulário e nossa equipe entra em contato.',
   /** O `\n` marca a quebra de linha de cada destaque. */
   trust: [
     { icon: 'factory', label: 'Atendimento B2B\nindustrial' },
@@ -100,7 +100,7 @@ export const quote = {
 
 export const footer = {
   /** Frase da marca ao lado da logo. */
-  tagline: 'Manutenção, peças e suporte técnico para a máxima performance do seu ar comprimido',
+  tagline: 'Manutenção, peças e suporte técnico para o melhor desempenho do seu ar comprimido',
   /** Nome acessível do bloco de contatos (não aparece na tela). */
   contactLabel: 'Atendimento',
   quoteButton: 'Solicitar cotação',

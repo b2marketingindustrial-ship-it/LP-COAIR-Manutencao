@@ -45,7 +45,7 @@ export const why = {
     {
       icon: 'sliders',
       title: 'Planos sob medida',
-      description: 'Plano adaptado ao modal de operação, uso e regime de trabalho.',
+      description: 'Plano adaptado ao regime de operação, uso e regime de trabalho.',
     },
     {
       icon: 'cog',
